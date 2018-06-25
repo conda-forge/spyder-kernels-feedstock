@@ -1,7 +1,7 @@
 {% set name = "spyder-kernels" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.3" %}
 {% set hash_type = "sha256" %}
-{% set hash = "2d9ea772a8b7a36ea37a447398b9750e056d409751a2fe955e895547bbb9b278" %}
+{% set hash = "c517c3044274895ece37bc5e156aaabcd015c56fb7f6f45bf2e55a4febb2ffbe" %}
 
 package:
   name: {{ name|lower }}
