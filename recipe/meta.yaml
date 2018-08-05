@@ -33,16 +33,40 @@ test:
     - spyder_kernels
 
 about:
-  home: https://github.com/spyder-ide/spyder-kernels
+  home: https://www.spyder-ide.org/
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Jupyter kernels for the Spyder console'
+  summary: Jupyter kernels for the Spyder IDE's IPython consoles
 
   description: |
-    Package that provides the kernels used by Spyder on its IPython console.
-    It has as dependencies ipykernel and cloudpickle.
-  dev_url: https://github.com/spyder-ide/spyder-kernels/tree/0.x
+    Provides Jupyter kernels for use with the Spyder IDE's IPython consoles,
+    launched either through Spyder itself or in an independent Python session.
+    These allow for interactive or file-based execution of Python code in
+    different environments inside of Spyder. Deps: ipykernel and cloudpickle.
+
+    Spyder is a powerful scientific environment written in Python, for Python,
+    and designed by and for scientists, engineers and data analysts.
+    It features a unique combination of the advanced editing, analysis,
+    debugging and profiling functionality of a comprehensive development tool
+    with the data exploration, interactive execution, deep inspection and
+    beautiful visualization capabilities of a scientific package.
+
+    To launch a Spyder IPython console and run code in a different environment
+    (virtualenv/venv or conda), Python installation or machine from Spyder
+    itself, just install this package there and either change Spyder's Python
+    interpreter to point to it (under Tools > Preferences - Python interpreter)
+    or launch an independent kernel on the host
+    (via python -m spyder_kernels.console) and connect to it via the
+    Console -> Connect to existing kernel dialog in Spyder.
+
+    For further advice on managing packages and environments with Spyder, see:
+    https://github.com/spyder-ide/spyder/wiki/Working-with-packages-and-environments-in-Spyder
+
+    To learn more about creating, connecting and using Spyder's consoles, read:
+    https://docs.spyder-ide.org/ipythonconsole.html
+  doc_url: https://docs.spyder-ide.org/
+  dev_url: https://github.com/spyder-ide/spyder-kernels
 
 extra:
   recipe-maintainers:
