@@ -1,16 +1,26 @@
 About spyder-kernels
 ====================
 
-Home: https://github.com/spyder-ide/spyder-kernels
+Home: https://www.spyder-ide.org/
 
 Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Jupyter kernels for the Spyder console
+Summary: Jupyter kernels for Spyder's console
 
-Package that provides the kernels used by Spyder on its IPython console.
-It has as dependencies ipykernel and cloudpickle.
+Provides Jupyter kernels for use with the consoles of Spyder, the
+Scientific Python Development Environment. These can launched either
+through Spyder itself or in an independent Python session, and allow for
+interactive or file-based execution of Python code in different
+environments, all inside the IDE.
+For more on Spyder, visit https://www.spyder-ide.org/
+
+To learn about creating, connecting and using Spyder's consoles, read:
+https://docs.spyder-ide.org/ipythonconsole.html
+
+For advice on managing packages and environments with Spyder, see:
+https://github.com/spyder-ide/spyder/wiki/Working-with-packages-and-environments-in-Spyder
 
 
 Current build status
