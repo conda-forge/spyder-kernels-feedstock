@@ -1,7 +1,7 @@
 {% set name = "spyder-kernels" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 {% set hash_type = "sha256" %}
-{% set hash = "d5bfc5fdbc98c8bef7910ac4a28638272179c9077a45e4b9b820ba87a916b18a" %}
+{% set hash = "a793b0c8c8d2ddce339e6c6f2e2888286d8f7b8d56d231d34ea3baa64baba339" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -25,7 +25,9 @@ requirements:
 
   run:
     - python
-    - ipykernel
+    - ipykernel >=4.8.2
+    - pyzmq >=17
+    - jupyter_client >=5.2.3
     - cloudpickle
 
 test:
