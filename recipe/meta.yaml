@@ -38,7 +38,6 @@ about:
   home: https://www.spyder-ide.org/
   license: MIT
   license_family: MIT
-  license_file: LICENSE
   summary: Jupyter kernels for Spyder's console
 
   description: |
