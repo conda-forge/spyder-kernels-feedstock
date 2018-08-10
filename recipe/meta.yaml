@@ -1,7 +1,7 @@
 {% set name = "spyder-kernels" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.3" %}
 {% set hash_type = "sha256" %}
-{% set hash = "ce4950684a3b82cd995700e2623c8749d1194823f990d6ed24711e7db4cf202a" %}
+{% set hash = "4acf8539a19d72469087394b597201a2d4fa9c06bbd815cc170ed4ee59f93688" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -25,7 +25,9 @@ requirements:
 
   run:
     - python
-    - ipykernel
+    - ipykernel >=4.8.2
+    - pyzmq >=17
+    - jupyter_client >=5.2.3
     - cloudpickle
 
 test:
@@ -36,7 +38,7 @@ about:
   home: https://www.spyder-ide.org/
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
   summary: Jupyter kernels for Spyder's console
 
   description: |
