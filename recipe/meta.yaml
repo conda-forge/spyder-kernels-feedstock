@@ -25,7 +25,9 @@ requirements:
 
   run:
     - python
-    - ipykernel
+    - ipykernel >=4.8.2
+    - pyzmq >=17
+    - jupyter_client >=5.2.3
     - cloudpickle
 
 test:
@@ -36,7 +38,7 @@ about:
   home: https://www.spyder-ide.org/
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
   summary: Jupyter kernels for Spyder's console
 
   description: |
