@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -25,7 +25,9 @@ requirements:
 
   run:
     - python
-    - ipykernel >=4.8.2
+    # https://github.com/spyder-ide/spyder/issues/7842#issuecomment-419149113
+    - ipykernel >=4.8.2          # [not win]
+    - ipykernel >=4.8.2,!=4.9.0  # [win]
     - pyzmq >=17
     - jupyter_client >=5.2.3
     - cloudpickle
