@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
 
   run:
     - python
-    - ipykernel >=4.8.2
+    - ipykernel >=4.8.2,!=4.9.0
     - pyzmq >=17
     - jupyter_client >=5.2.3
     - cloudpickle
