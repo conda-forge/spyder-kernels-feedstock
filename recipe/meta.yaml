@@ -1,28 +1,22 @@
-{% set name = "spyder-kernels" %}
-{% set version = "1.1.0" %}
-{% set hash_type = "sha256" %}
-{% set hash = "7e4d6a55e679757bdbae833f9fcdc4239f0086a8ba38439a252612cd113ac4fa" %}
+{% set version = "0.2.6" %}
 
 package:
-  name: {{ name|lower }}
+  name: spyder-kernels
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/s/spyder-kernels/spyder-kernels-{{ version }}.tar.gz
+  sha256: 26c8e9f78f90ac107ee72ccf78b2550d65d437010990aaf30396d0f90af3282c
 
 build:
-  noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
-    - pip
     - python
-    - setuptools
-
+    - pip
   run:
     - python
     - ipykernel >=4.8.2
