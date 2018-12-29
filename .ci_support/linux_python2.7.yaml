@@ -3,7 +3,7 @@ build_number_decrement:
 channel_sources:
 - conda-forge,defaults
 channel_targets:
-- conda-forge main
+- conda-forge beta
 docker_image:
 - condaforge/linux-anvil
 pin_run_as_build:
