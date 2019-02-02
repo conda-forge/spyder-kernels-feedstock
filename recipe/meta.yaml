@@ -1,7 +1,7 @@
 {% set name = "spyder-kernels" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 {% set hash_type = "sha256" %}
-{% set hash = "dcf54b519db2a11dcbbc07d3d06caea61b102f0d498c0282a08d00d91b578005" %}
+{% set hash = "a875ed118162cfb55aac38318c770f6304dadd20e5a7f4e317b49b03c567d1c9" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1001
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
 
 requirements:
