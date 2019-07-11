@@ -1,7 +1,7 @@
 {% set name = "spyder-kernels" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 {% set hash_type = "sha256" %}
-{% set hash = "d1ee3a2b39a1f7265f5d2161c47116a2b58e1e22a3a52ab7b3aa6e87137e0d75" %}
+{% set hash = "7e124fad5203b748005e952cf33b44695dbb9d92f5e0dc5443e7ca0db817f400" %}
 
 package:
   name: {{ name|lower }}
@@ -61,3 +61,4 @@ extra:
   recipe-maintainers:
     - ccordoba12
     - dalthviz
+    - goanpeca
