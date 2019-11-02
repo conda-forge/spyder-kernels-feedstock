@@ -1,7 +1,7 @@
 {% set name = "spyder-kernels" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 {% set hash_type = "sha256" %}
-{% set hash = "e374452af89f507b345431338c6655465b5c15d0b5e49f703be8c30bbe1d1202" %}
+{% set hash = "c36859339a43767a6581232ac3acc1d79d78bcb8ba6c2c72b03ec61b1a6b5e0b" %}
 
 package:
   name: {{ name|lower }}
@@ -24,10 +24,10 @@ requirements:
 
   run:
     - python
-    - ipykernel >4.9.0
+    - ipykernel >4.9.0  # [py2k]
+    - ipykernel >=5.1.3  # [py3k]
     - pyzmq >=17
     - jupyter_client >=5.3.4
-    - jupyter_core >=4.6.0
     - cloudpickle
     - wurlitzer >=1.0.3  # [not win]
 
