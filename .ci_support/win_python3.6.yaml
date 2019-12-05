@@ -1,7 +1,7 @@
 channel_sources:
 - conda-forge,defaults
 channel_targets:
-- conda-forge beta
+- conda-forge main
 pin_run_as_build:
   python:
     min_pin: x.x
