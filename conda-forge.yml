@@ -7,5 +7,5 @@ appveyor:
 max_py_ver: '37'
 provider:
   win: azure
-  linux_aarch64: azure
+  linux_aarch64: default
   
