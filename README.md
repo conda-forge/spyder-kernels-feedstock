@@ -27,7 +27,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>Drone</td>
+    <td>
+      <a href="https://cloud.drone.io/conda-forge/spyder-kernels-feedstock">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/master.svg?label=Linux">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -41,6 +48,27 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
+              <td>linux_aarch64_python3.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3593&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spyder-kernels-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_python3.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_python3.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3593&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spyder-kernels-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_python3.7" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_python3.8</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3593&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spyder-kernels-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_python3.8" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_python2.7</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3593&branchName=master">
