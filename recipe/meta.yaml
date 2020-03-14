@@ -1,7 +1,6 @@
 {% set name = "spyder-kernels" %}
-{% set version = "1.8.1" %}
-{% set hash_type = "sha256" %}
-{% set hash = "a782fc5961a9dd48d520ddc1c868b960d54b8edb1116c21fc2e3c347fe5a4474" %}
+{% set version = "1.9.0" %}
+{% set hash = "f2e651731b6e0f392c34d908f9a5a307de58a5ab7a08a2c6619931bcd45312eb" %}
 
 package:
   name: {{ name|lower }}
@@ -10,11 +9,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
 
 requirements:
   host:
