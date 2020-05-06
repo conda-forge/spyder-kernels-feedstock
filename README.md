@@ -38,7 +38,7 @@ Current build status
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/spyder-kernels-feedstock">
-        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/master.svg?label=Linux">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/spyder-kernels-feedstock/master.svg?label=Linux">
       </a>
     </td>
   </tr>
@@ -97,13 +97,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_python2.7.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3593&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spyder-kernels-feedstock?branchName=master&jobName=linux&configuration=linux_python2.7.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3593&branchName=master">
@@ -125,13 +118,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_python2.7.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3593&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spyder-kernels-feedstock?branchName=master&jobName=osx&configuration=osx_python2.7.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3593&branchName=master">
@@ -150,13 +136,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3593&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spyder-kernels-feedstock?branchName=master&jobName=osx&configuration=osx_python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_python2.7.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3593&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spyder-kernels-feedstock?branchName=master&jobName=win&configuration=win_python2.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
