@@ -5,9 +5,13 @@ Home: https://www.spyder-ide.org/
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spyder-kernels-feedstock/blob/master/LICENSE.txt)
 
 Summary: Jupyter kernels for Spyder's console
+
+Development: https://github.com/spyder-ide/spyder-kernels
+
+Documentation: https://docs.spyder-ide.org/
 
 Provides Jupyter kernels for use with the consoles of Spyder, the
 Scientific Python Development Environment. These can launched either
