@@ -30,7 +30,7 @@ requirements:
     - cloudpickle
     - ipykernel >=5.3.0
     - ipython >=7.6.0
-    - jupyter_client >=5.3.4,<7
+    - jupyter_client >=5.3.4
     - pyzmq >=17
     - wurlitzer >=1.0.3  # [not win]
 
