@@ -1,6 +1,6 @@
 {% set name = "spyder-kernels" %}
-{% set version = "2.1.3" %}
-{% set hash = "ab5c2a90d44f0a26e7a6862e3cb73bb2d7084bc72f9336d8c2d2a78c145c4645" %}
+{% set version = "2.2.0" %}
+{% set hash = "6b19ea224f183dbff8ff0031bee35ae6b5b3a6eef4aa84cfab04e3bc3e304b91" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
 
 requirements:
@@ -30,7 +30,7 @@ requirements:
     - cloudpickle
     - ipykernel >=5.3.0
     - ipython >=7.6.0
-    - jupyter_client >=5.3.4,<7
+    - jupyter_client >=5.3.4
     - pyzmq >=17
     - wurlitzer >=1.0.3  # [not win]
 
