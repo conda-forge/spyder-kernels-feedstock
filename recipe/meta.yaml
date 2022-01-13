@@ -28,10 +28,10 @@ requirements:
   run:
     - python
     - cloudpickle
-    - ipykernel >=5.3.0
+    - ipykernel >=6.6.1
     - ipython >=7.6.0
-    - jupyter_client >=5.3.4
-    - pyzmq >=17
+    - jupyter_client >=7.1.0
+    - pyzmq >=22.1.0
     - wurlitzer >=1.0.3  # [not win]
 
 test:
