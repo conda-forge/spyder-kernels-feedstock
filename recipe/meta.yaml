@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
 
 requirements:
@@ -29,14 +29,18 @@ requirements:
     - python
     - cloudpickle
     - ipykernel >=6.6.1
-    - ipython >=7.6.0
+    - ipython >=7.6.0,<8.0.0
     - jupyter_client >=7.1.0
     - pyzmq >=22.1.0
     - wurlitzer >=1.0.3  # [not win]
 
 test:
+  requires:
+    - pip
   imports:
     - spyder_kernels
+  commands:
+    - python -m pip check
 
 about:
   home: https://www.spyder-ide.org/
