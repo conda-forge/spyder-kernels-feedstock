@@ -1,6 +1,6 @@
 {% set name = "spyder-kernels" %}
-{% set version = "2.3.0" %}
-{% set hash = "a5d536d0e8a5e774d7d616c102a8fa2d6aa45fd330a0b799b98eef158356d36c" %}
+{% set version = "2.3.1" %}
+{% set hash = "98fb77717ee94b5a3c8069612fc438bb748597179a5b3ecba290faa922782e50" %}
 
 package:
   name: {{ name|lower }}
@@ -17,7 +17,7 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
+    - python                                # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
 
   host:
@@ -28,9 +28,9 @@ requirements:
   run:
     - python
     - cloudpickle
-    - ipykernel >=6.9.2
+    - ipykernel >=6.9.2,<7.0.0
     - ipython >=7.31.1,<8.0.0
-    - jupyter_client >=7.1.0
+    - jupyter_client >=7.3.1,<8.0.0
     - pyzmq >=22.1.0
     - wurlitzer >=1.0.3  # [not win]
 
