@@ -17,7 +17,7 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
+    - python                                # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
 
   host:
@@ -28,9 +28,9 @@ requirements:
   run:
     - python
     - cloudpickle
-    - ipykernel >=6.9.2
+    - ipykernel >=6.9.2,<7.0.0
     - ipython >=7.31.1,<8.0.0
-    - jupyter_client >=7.1.0
+    - jupyter_client >=7.3.1,<8.0.0
     - pyzmq >=22.1.0
     - wurlitzer >=1.0.3  # [not win]
 
