@@ -1,6 +1,6 @@
 {% set name = "spyder-kernels" %}
-{% set version = "2.3.1" %}
-{% set hash = "98fb77717ee94b5a3c8069612fc438bb748597179a5b3ecba290faa922782e50" %}
+{% set version = "2.3.2" %}
+{% set hash = "bab23b024db9359cec5182e247e70875f71ddc40a8271fd1353de08f440f26dc" %}
 
 package:
   name: {{ name|lower }}
@@ -30,7 +30,8 @@ requirements:
     - cloudpickle
     - ipykernel >=6.9.2,<7.0.0
     - ipython >=7.31.1,<8.0.0
-    - jupyter_client >=7.3.1,<8.0.0
+    - jupyter_client >=7.3.1,<8.0.0  # [python_impl == 'pypy']
+    - jupyter_client >=7.3.4,<8.0.0  # [python_impl == 'cpython']
     - pyzmq >=22.1.0
     - wurlitzer >=1.0.3  # [not win]
 
@@ -38,9 +39,9 @@ test:
   requires:
     - pip
   imports:
-    - spyder_kernels
+    - spyder_kernels  # [python_impl == 'cpython']
   commands:
-    - python -m pip check
+    - python -m pip check  # [python_impl == 'cpython']
 
 about:
   home: https://www.spyder-ide.org/
