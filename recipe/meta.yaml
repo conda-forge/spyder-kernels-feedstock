@@ -28,7 +28,7 @@ requirements:
     - ipython >=7.31.1,<8.0.0
     - jupyter_client >=7.3.4,<8.0.0
     - pyzmq >=22.1.0
-    - wurlitzer >=1.0.3  # [not win]
+    - wurlitzer >=1.0.3  # [unix]
     - __unix  # [unix]
     - __win   # [win]
 
