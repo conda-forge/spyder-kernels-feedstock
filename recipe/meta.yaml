@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.0
+    - python >=3.7
     - pip
     - setuptools
   run:
-    - python >=3.0
+    - python >=3.7
     - cloudpickle
     - ipykernel >=6.16.1,<7.0.0
     - ipython >=7.31.1,<8.0.0
