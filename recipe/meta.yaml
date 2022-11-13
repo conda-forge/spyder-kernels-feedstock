@@ -1,47 +1,44 @@
 {% set name = "spyder-kernels" %}
 {% set version = "2.4.0" %}
-{% set hash = "3bd32fbe30a150ab9ccedbd5beb6ddd38bde1d9a8778da52f7edf420bbfb8e51" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/spyder-kernels-{{ version }}.tar.gz
+  sha256: 3bd32fbe30a150ab9ccedbd5beb6ddd38bde1d9a8778da52f7edf420bbfb8e51
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
+  noarch: python
+  string: "unix_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"  # [unix]
+  string: "win_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"   # [win]
 
 requirements:
-  build:
-    - python                                # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-
   host:
+    - python >=3.7
     - pip
-    - python
     - setuptools
-
   run:
-    - python
+    - python >=3.7
     - cloudpickle
     - ipykernel >=6.16.1,<7.0.0
     - ipython >=7.31.1,<8.0.0
-    - jupyter_client >=7.3.1,<8.0.0  # [python_impl == 'pypy']
-    - jupyter_client >=7.3.4,<8.0.0  # [python_impl == 'cpython']
+    - jupyter_client >=7.3.4,<8.0.0
     - pyzmq >=22.1.0
-    - wurlitzer >=1.0.3  # [not win]
+    - wurlitzer >=1.0.3  # [unix]
+    - __unix  # [unix]
+    - __win   # [win]
 
 test:
+  imports:
+    - spyder_kernels
+  commands:
+    - pip check
   requires:
     - pip
-  imports:
-    - spyder_kernels  # [python_impl == 'cpython']
-  commands:
-    - python -m pip check  # [python_impl == 'cpython']
 
 about:
   home: https://www.spyder-ide.org/
