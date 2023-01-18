@@ -1,5 +1,5 @@
 {% set name = "spyder-kernels" %}
-{% set version = "2.4.1" %}
+{% set version = "2.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/spyder-kernels-{{ version }}.tar.gz
-  sha256: 783d8dfbd715cd97728e913916779b37cf8e96566355ebdacfe3411d2beb4796
+  sha256: 97586eabda1f714c26035b5b01ed7c2e3f539b0de76bd479af5003f5f19b3eb7
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -26,7 +26,7 @@ requirements:
     - cloudpickle
     - ipykernel >=6.16.1,<7.0.0
     - ipython >=7.31.1,<9.0.0
-    - jupyter_client >=7.3.4,<8.0.0
+    - jupyter_client >=7.4.9,<8.0.0
     - pyzmq >=22.1.0
     - wurlitzer >=1.0.3  # [unix]
     - __unix  # [unix]
