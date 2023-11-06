@@ -1,5 +1,5 @@
 {% set name = "spyder-kernels" %}
-{% set version = "2.4.4" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/spyder-kernels-{{ version }}.tar.gz
-  sha256: 363bb0a0e1594cb691637464192f4f19969095469252242b43c092bf305a25dd
+  sha256: 3368426c04457e0211884e9274fa47eb556252ba4c073df275e83c65df7ba2a1
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
   noarch: python
   string: "unix_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"  # [unix]
-  string: "win_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"   # [win]
+  string: "win_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"  # [win]
 
 requirements:
   host:
