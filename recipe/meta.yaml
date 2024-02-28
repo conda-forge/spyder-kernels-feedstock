@@ -1,5 +1,5 @@
 {% set name = "spyder-kernels" %}
-{% set version = "2.5.0" %}
+{% set version = "2.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/spyder-kernels-{{ version }}.tar.gz
-  sha256: 3368426c04457e0211884e9274fa47eb556252ba4c073df275e83c65df7ba2a1
+  sha256: 05042a3f97b25f17cdfa8d75011fd79aaf027523348a9dfff0f5a20bddb0b9b0
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
