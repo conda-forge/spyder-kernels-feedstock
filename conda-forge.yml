@@ -1,5 +1,4 @@
 conda_forge_output_validation: true
-test_on_native_only: true
 github:
   branch_name: main
   tooling_branch_name: main
@@ -8,3 +7,4 @@ noarch_platforms:
 - win_64
 conda_build:
   pkg_format: '2'
+test: native_and_emulated
