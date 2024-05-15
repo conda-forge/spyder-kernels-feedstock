@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/spyder-kernels-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/spyder_kernels-{{ version }}.tar.gz
   sha256: 5432265b73788b304ed641c0e5ce0a3ced7b853caa318323722ef364179adb88
 
 build:
