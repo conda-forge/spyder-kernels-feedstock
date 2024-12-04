@@ -1,4 +1,5 @@
 {% set name = "spyder-kernels" %}
+{% set python_min = "3.8" %}
 {% set version = "3.0.2" %}
 
 package:
@@ -6,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: a5300a0cc18d9201c006827c170b0ec08cfc943f775f083abfb6bdf672feb561
 
 build:
@@ -18,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - cloudpickle
     - ipykernel >=6.29.3,<7.0.0
     - ipython >=8.12.2,<9.0.0,!=8.17.1
@@ -39,6 +40,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
