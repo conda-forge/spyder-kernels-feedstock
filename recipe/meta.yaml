@@ -23,7 +23,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python {{ python_min }}
+    - python >={{ python_min }}
     - cloudpickle
     - ipykernel >=6.29.3,<7.0.0
     - ipython >=8.12.2,<9.0.0,!=8.17.1
