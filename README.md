@@ -50,14 +50,14 @@ Current release info
 Installing spyder-kernels
 =========================
 
-Installing `spyder-kernels` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `spyder-kernels` from the `conda-forge/label/spyder_kernels_dev` channel can be achieved by adding `conda-forge/label/spyder_kernels_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/spyder_kernels_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `spyder-kernels` can be installed with `conda`:
+Once the `conda-forge/label/spyder_kernels_dev` channel has been enabled, `spyder-kernels` can be installed with `conda`:
 
 ```
 conda install spyder-kernels
@@ -72,26 +72,26 @@ mamba install spyder-kernels
 It is possible to list all of the versions of `spyder-kernels` available on your platform with `conda`:
 
 ```
-conda search spyder-kernels --channel conda-forge
+conda search spyder-kernels --channel conda-forge/label/spyder_kernels_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search spyder-kernels --channel conda-forge
+mamba search spyder-kernels --channel conda-forge/label/spyder_kernels_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search spyder-kernels --channel conda-forge
+mamba repoquery search spyder-kernels --channel conda-forge/label/spyder_kernels_dev
 
 # List packages depending on `spyder-kernels`:
-mamba repoquery whoneeds spyder-kernels --channel conda-forge
+mamba repoquery whoneeds spyder-kernels --channel conda-forge/label/spyder_kernels_dev
 
 # List dependencies of `spyder-kernels`:
-mamba repoquery depends spyder-kernels --channel conda-forge
+mamba repoquery depends spyder-kernels --channel conda-forge/label/spyder_kernels_dev
 ```
 
 
