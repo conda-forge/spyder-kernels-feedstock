@@ -30,7 +30,7 @@ requirements:
     - jupyter_client >=7.4.9,<9.0.0
     - pyxdg >=0.26  # [unix]
     - pyzmq >=24.0.0
-    - traitlets >= 5.14.3
+    - traitlets >=5.14.3
     - wurlitzer >=1.0.3  # [unix]
     - __unix  # [unix]
     - __win   # [win]
