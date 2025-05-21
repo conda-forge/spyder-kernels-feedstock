@@ -1,6 +1,6 @@
 {% set name = "spyder-kernels" %}
 {% set python_min = "3.8" %}
-{% set version = "3.0.4" %}
+{% set version = "3.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 5ecf49db7e10bb9618ec9996ea67660b031773c2cd9054d441d8228115f4790c
+  sha256: ff7a1e832eed723575882b86c81c8f82ed8d6929c05c399bac2771d605578cd8
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
