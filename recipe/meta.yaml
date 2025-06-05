@@ -1,6 +1,6 @@
 {% set name = "spyder-kernels" %}
 {% set python_min = "3.8" %}
-{% set version = "3.1.0a1" %}
+{% set version = "3.1.0a2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 5df6c40b7f5afec14eb0208ee7c4ff5b197bdc72c142792804aef384b463d764
+  sha256: aaba6244853925ece5fa9bbfb964b28608f9047115800699f980f1b7f6a9a1ce
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -30,6 +30,7 @@ requirements:
     - jupyter_client >=7.4.9,<9.0.0
     - pyxdg >=0.26  # [unix]
     - pyzmq >=24.0.0
+    - traitlets >=5.14.3
     - wurlitzer >=1.0.3  # [unix]
     - __unix  # [unix]
     - __win   # [win]
