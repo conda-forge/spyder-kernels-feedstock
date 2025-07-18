@@ -1,5 +1,5 @@
 {% set name = "spyder-kernels" %}
-{% set python_min = "3.8" %}
+{% set python_min = "3.9" %}
 {% set version = "3.1.0a2" %}
 
 package:
@@ -12,7 +12,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
   string: "unix_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"  # [unix]
   string: "win_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"  # [win]
