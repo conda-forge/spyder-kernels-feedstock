@@ -1,6 +1,6 @@
 {% set name = "spyder-kernels" %}
 {% set python_min = "3.9" %}
-{% set version = "3.1.0a2" %}
+{% set version = "3.1.0a3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: aaba6244853925ece5fa9bbfb964b28608f9047115800699f980f1b7f6a9a1ce
+  sha256: bd2096a0841d7bca37739fd36c988dc6f5139a0cc435623908f0ca9963cf229e
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   noarch: python
   string: "unix_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"  # [unix]
   string: "win_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"  # [win]
@@ -26,7 +26,7 @@ requirements:
     - python >={{ python_min }}
     - cloudpickle
     - ipykernel >=6.29.3,<7.0.0
-    - ipython >=8.12.2,<9.0.0,!=8.17.1
+    - ipython >=8.13.0,<9.0.0,!=8.17.1
     - jupyter_client >=7.4.9,<9.0.0
     - pyxdg >=0.26  # [unix]
     - pyzmq >=24.0.0
