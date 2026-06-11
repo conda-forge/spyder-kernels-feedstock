@@ -1,5 +1,5 @@
 {% set name = "spyder-kernels" %}
-{% set python_min = "3.9" %}
+{% set python_min = "3.10" %}
 {% set version = "3.1.0" %}
 
 package:
