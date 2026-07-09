@@ -3,4 +3,4 @@ channel_sources:
 channel_targets:
 - conda-forge spyder_kernels_dev
 python_min:
-- '3.9'
+- '3.10'
